@@ -10,7 +10,7 @@ def load_api_key():
         config = toml.load(f)
     return config["replicate"]["api_key"]
 
-api_key = "r8_900Yo3sJvnZ276SJ2DDUfYLzkskh5qO3oadhI"  # Ensure this is correct
+api_key = "r8_W70VQ7CK2oRHUhoJl8P6TCplrcvIQP01mFU1S"  # Ensure this is correct
 print(api_key)
 
 # Initialize Replicate client
