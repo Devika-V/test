@@ -3,14 +3,17 @@ import replicate
 import os
 import pandas as pd
 import toml
+from dotenv import load_dotenv
+
+load_dotenv()  # This loads the .env file and sets the variables
 
 # Load API key from secrets.toml
-def load_api_key():
-    with open("secrets.toml", "r") as f:
-        config = toml.load(f)
-    return config["replicate"]["api_key"]
+# def load_api_key():
+#     with open("secrets.toml", "r") as f:
+#         config = toml.load(f)
+#     return config["replicate"]["api_key"]
 
-api_key = "r8_900Yo3sJvnZ276SJ2DDUfYLzkskh5qO3oadhI"  # Ensure this is correct
+api_key = os.getenv("REPLICATE_API_KEY")  # Fetch the API key using os.getenv()
 print(api_key)
 
 # Initialize Replicate client
