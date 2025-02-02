@@ -1,0 +1,4 @@
+streamlit==1.21.0
+replicate==0.2.0
+pandas==2.0.1
+toml==0.10.2
